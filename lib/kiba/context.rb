@@ -1,7 +1,12 @@
 module Kiba
   class Context
-    def initialize(control)
+    def initialize(control, options = {})
       @control = control
+      @options = options
+    end
+
+    def options
+      @options
     end
 
     def pre_process(&block)
